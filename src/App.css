@@ -1,0 +1,382 @@
+/* 全局样式 */
+.App {
+  text-align: left;
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* 消息列表样式 */
+.message-list {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.message-item {
+  margin-bottom: 16px;
+}
+
+.message-content {
+  max-width: 70%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  word-break: break-word;
+}
+
+.message-content.customer-service {
+  background: #1890ff;
+  color: white;
+  margin-left: auto;
+}
+
+.message-content.user {
+  background: #f0f0f0;
+  color: black;
+}
+
+.message-time {
+  font-size: 10px;
+  opacity: 0.7;
+  margin-top: 4px;
+}
+
+/* 会话列表样式 */
+.session-item {
+  padding: 12px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 4px 0;
+  transition: all 0.3s;
+}
+
+.session-item:hover {
+  background: #f5f5f5;
+}
+
+.session-item.active {
+  background: #e6f7ff;
+  border-left: 3px solid #1890ff;
+}
+
+.session-avatar {
+  position: relative;
+}
+
+.session-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+}
+
+/* 输入框样式 */
+.chat-input {
+  border-radius: 6px;
+}
+
+.chat-input .ant-input {
+  border-radius: 0;
+}
+
+.chat-input .ant-btn:first-child {
+  border-radius: 6px 0 0 6px;
+}
+
+.chat-input .ant-btn:last-child {
+  border-radius: 0 6px 6px 0;
+}
+
+/* 表情选择器样式 */
+.emoji-picker-container {
+  position: absolute;
+  bottom: 80px;
+  right: 24px;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* 文件上传样式 */
+.file-upload-dragger {
+  border-radius: 8px;
+}
+
+.file-upload-dragger .ant-upload-drag-icon {
+  font-size: 48px;
+  color: #1890ff;
+}
+
+.file-upload-dragger .ant-upload-text {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.file-upload-dragger .ant-upload-hint {
+  font-size: 14px;
+  color: #666;
+}
+
+/* 统计卡片样式 */
+.statistic-card {
+  text-align: center;
+}
+
+.statistic-card .ant-statistic-title {
+  font-size: 12px;
+  color: #666;
+}
+
+.statistic-card .ant-statistic-content {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* 状态标签样式 */
+.status-tag {
+  font-size: 12px;
+}
+
+.priority-tag {
+  font-size: 12px;
+}
+
+/* 头像样式 */
+.avatar-container {
+  position: relative;
+  display: inline-block;
+}
+
+.avatar-upload {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #1890ff;
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .session-list {
+    width: 100%;
+  }
+  
+  .chat-interface {
+    width: 100%;
+  }
+  
+  .message-content {
+    max-width: 85%;
+  }
+}
+
+/* 动画效果 */
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* 加载状态 */
+.loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+
+/* 空状态 */
+.empty-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: #999;
+}
+
+.empty-container .anticon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+/* 工具提示样式 */
+.ant-tooltip-inner {
+  font-size: 12px;
+}
+
+/* 模态框样式 */
+.ant-modal-header {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.ant-modal-body {
+  padding: 24px;
+}
+
+/* 表单样式 */
+.ant-form-item-label > label {
+  font-weight: 500;
+}
+
+/* 按钮样式 */
+.ant-btn-primary {
+  background: #1890ff;
+  border-color: #1890ff;
+}
+
+.ant-btn-primary:hover {
+  background: #40a9ff;
+  border-color: #40a9ff;
+}
+
+/* 卡片样式 */
+.ant-card {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ant-card-head {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* 列表样式 */
+.ant-list-item {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.ant-list-item:last-child {
+  border-bottom: none;
+}
+
+/* 徽章样式 */
+.ant-badge-count {
+  font-size: 12px;
+  min-width: 18px;
+  height: 18px;
+  line-height: 18px;
+}
+
+/* 标签样式 */
+.ant-tag {
+  border-radius: 4px;
+  font-size: 12px;
+  padding: 2px 8px;
+}
+
+/* 头像样式 */
+.ant-avatar {
+  border: 2px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 输入框样式 */
+.ant-input {
+  border-radius: 6px;
+}
+
+.ant-input:focus {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+/* 文本域样式 */
+.ant-input {
+  border-radius: 6px;
+}
+
+/* 上传组件样式 */
+.ant-upload-dragger {
+  border-radius: 8px;
+  border: 2px dashed #d9d9d9;
+}
+
+.ant-upload-dragger:hover {
+  border-color: #1890ff;
+}
+
+/* 统计数字样式 */
+.ant-statistic-content {
+  color: #262626;
+}
+
+.ant-statistic-content-value {
+  font-weight: 600;
+}
+
+/* 菜单样式 */
+.ant-dropdown-menu {
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.ant-dropdown-menu-item {
+  padding: 8px 16px;
+}
+
+.ant-dropdown-menu-item:hover {
+  background: #f5f5f5;
+}
+
+/* 头部样式 */
+.ant-layout-header {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 侧边栏样式 */
+.ant-layout-sider {
+  background: #fff;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 内容区样式 */
+.ant-layout-content {
+  background: #fafafa;
+}
